@@ -1,3 +1,5 @@
+__author__ = 'Teja R'
+__version__= '1.0'
 from __future__ import division
 import yaml
 import requests
