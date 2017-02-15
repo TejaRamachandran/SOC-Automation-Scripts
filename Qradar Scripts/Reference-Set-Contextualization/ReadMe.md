@@ -17,5 +17,14 @@ Important Note - create some scheduler in your system and run script for each 20
 
 Happy Detecting !! 
 
-
-       
+##Future Enhancements for the script##
+  - Script will check more than on TI feeds(XFE, MXtoolBox Etc) and will provide you the Risk score 
+  - Soon Scripts will create for bellow IOC's too:
+    - URLs
+    - ASN
+    - File Hash
+    - File Name
+    - Username or UserAccount
+    - ASN
+    - Domains
+    - Phishing URLs 
