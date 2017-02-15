@@ -7,7 +7,6 @@ import urllib
 import os
 from datetime import datetime
 
-
 with open("config.yml", 'r') as ymlfile:
     cfg = yaml.load(ymlfile)
 
@@ -23,11 +22,8 @@ for section in cfg:
 	pxy_pass = (cfg['config'] ['Proxy_Password'])
 	pxy_host = (cfg['config'] ['Proxy_Host'])
 	pxy_port = (cfg['config'] ['Proxy_Port'])
-	
-
 
 os.environ['NO_PROXY'] = qradar #Qradar console IP "Uncomment this line if you are not using proxy"
-#print (os.environ)
 
 headers = {'SEC': token} #security token for your Qradar get from yaml file
 
@@ -36,13 +32,9 @@ url = "https://{0}/api/reference_data/sets/{1}?fields=data(value)".format(qradar
 response = requests.get(url, headers=headers , verify=False)
 json_data = json.loads(response.text)
 
-
 for x in json_data['data']:
-	print (x['value'])
 	proxy_url = "http://{0}:{1}@{2}:{3}".format(pxy_user, pxy_pass, pxy_host, pxy_port )
-	print (proxy_url)
 	proxy = urllib2.ProxyHandler({'http': proxy_url})
-	print (proxy)
 	auth = urllib2.HTTPBasicAuthHandler()
 	opener = urllib2.build_opener(proxy, auth, urllib2.HTTPHandler)
 	urllib2.install_opener(opener)
@@ -54,7 +46,7 @@ for x in json_data['data']:
 		#print r_dict
 	except ValueError: #No JSON object could be decoded
 		pass
-		
+	
 	Pve_Results = 0
 	Tot_Results = 0
 
@@ -80,7 +72,6 @@ for x in json_data['data']:
 			print ("Nothing to post")
 	except ZeroDivisionError:
 		ratio = 0
-
 #print (url)
 #print (qradar)
 #print (token)
