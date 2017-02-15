@@ -1,0 +1,12 @@
+config:
+ QradarHost: xx.xx.xx.xx
+ AuthToken: xxxxxxxxxxxxxxxxxxxx
+ ReferenceSetName_A: <Reference Set Name - To GET IPs>
+ ReferenceSetName_B: <Reference Set Name - To Post IPs>
+ Virustotal_API_Key: <your VT API KKey>
+ Virustotal_Detection_Ratio: <Ratio in numer For Example 50 or 5>
+ Proxy_Username: <username>
+ #Encode your password Forexample @ is %40 - when is your password in pass@123, You should give like pass%40123. 
+ Proxy_Password: <password>
+ Proxy_Host: <Host or URL>
+ Proxy_Port: <Port No>
