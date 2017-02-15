@@ -1,2 +1,2 @@
 
-This Folder will have scripts will belongs - Qradar SIEM
+This Folder will have scripts which belongs to Qradar SIEM
