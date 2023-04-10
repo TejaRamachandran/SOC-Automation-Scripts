@@ -1,2 +1,2 @@
-IP, Hostname
-0.0.0.0, Helloworld
+Customer, Hostname, IPAddress, MACAddress, OperatingSystem, TeamActionable
+ABC, hellolaptop, 10.0.0.0, FA-3D-59-61-C5-2D, Linux, InfraTeam
